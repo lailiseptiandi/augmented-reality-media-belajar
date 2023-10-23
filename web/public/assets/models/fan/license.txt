@@ -1,0 +1,11 @@
+Model Information:
+* title:	Electric Fan
+* source:	https://sketchfab.com/3d-models/electric-fan-2dc339164cc14ff5bd6f906387ca29ff
+* author:	balm sukong (https://sketchfab.com/balmsukong)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Electric Fan" (https://sketchfab.com/3d-models/electric-fan-2dc339164cc14ff5bd6f906387ca29ff) by balm sukong (https://sketchfab.com/balmsukong) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

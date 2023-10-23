@@ -1,0 +1,11 @@
+Model Information:
+* title:	3D Cardboard (Lowpoly)
+* source:	https://sketchfab.com/3d-models/3d-cardboard-lowpoly-adeda38f455d4f80bdaf7eafb9840c99
+* author:	Erdogan Taskurt (https://sketchfab.com/erdogantaskurt)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3D Cardboard (Lowpoly)" (https://sketchfab.com/3d-models/3d-cardboard-lowpoly-adeda38f455d4f80bdaf7eafb9840c99) by Erdogan Taskurt (https://sketchfab.com/erdogantaskurt) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Asian conical hat
+* source:	https://sketchfab.com/3d-models/asian-conical-hat-d407409ab62543669aac4a30dcb744b5
+* author:	Samuel Francis Johnson (Oneironauticus) (https://sketchfab.com/oneironauticus)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Asian conical hat" (https://sketchfab.com/3d-models/asian-conical-hat-d407409ab62543669aac4a30dcb744b5) by Samuel Francis Johnson (Oneironauticus) (https://sketchfab.com/oneironauticus) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

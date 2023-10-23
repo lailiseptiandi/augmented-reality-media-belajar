@@ -1,0 +1,11 @@
+Model Information:
+* title:	Plates
+* source:	https://sketchfab.com/3d-models/plates-4bc67f865df64d52bdb640a887dc18ae
+* author:	Niraj (https://sketchfab.com/niraj.upadhyay)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Plates" (https://sketchfab.com/3d-models/plates-4bc67f865df64d52bdb640a887dc18ae) by Niraj (https://sketchfab.com/niraj.upadhyay) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kite
+* source:	https://sketchfab.com/3d-models/kite-881a6736d0eb4f53b38d75c5b03dc7fe
+* author:	remtromol (https://sketchfab.com/remtromol)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kite" (https://sketchfab.com/3d-models/kite-881a6736d0eb4f53b38d75c5b03dc7fe) by remtromol (https://sketchfab.com/remtromol) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

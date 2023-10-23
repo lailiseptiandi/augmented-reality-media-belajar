@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old School Radio
+* source:	https://sketchfab.com/3d-models/old-school-radio-f61faa569c2c41deb7ce505681732a65
+* author:	miqdadnaduthodi (https://sketchfab.com/miqdadnaduthodi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old School Radio" (https://sketchfab.com/3d-models/old-school-radio-f61faa569c2c41deb7ce505681732a65) by miqdadnaduthodi (https://sketchfab.com/miqdadnaduthodi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	rubric
+* source:	https://sketchfab.com/3d-models/rubric-b78231fe09974469ba9aee4ed4053895
+* author:	j.yunnn (https://sketchfab.com/j.yunnn)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "rubric" (https://sketchfab.com/3d-models/rubric-b78231fe09974469ba9aee4ed4053895) by j.yunnn (https://sketchfab.com/j.yunnn) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

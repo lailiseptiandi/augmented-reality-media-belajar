@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './button.css';
+
+.control-buttons {
+    position: relative;
+    z-index: 1000;
+}
+
+video {
+    width: 100vh;
+    object-fit: cover;
+    object-position: center;
+    /* transform: scale(-1, 2); */
+}
+
+.container {
+    margin: 20px auto;
+    position: relative;
+    height: calc(100vh - 150px);
+    width: 100vw;
+    overflow: hidden;
+}
