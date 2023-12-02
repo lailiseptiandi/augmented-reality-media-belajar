@@ -1,10 +1,10 @@
 import * as React from "react";
 import { WebView } from "react-native-webview";
 import Constants from "expo-constants";
-import { BackHandler, StyleSheet } from "react-native";
+import { BackHandler, StatusBar, StyleSheet } from "react-native";
 import { Camera } from 'expo-camera';
 import { Audio } from 'expo-av';
-
+import useSound from "react-native-use-sound";
 
 export default function App() {
 
@@ -12,10 +12,17 @@ export default function App() {
 
   const webViewRef = React.useRef();
 
+  const [isPlay, setIsPlay] = React.useState(true);
+
   const [canGoBack, setCanGoBack] = React.useState(false);
   const [currentUrl, setCurrentUrl] = React.useState(
     "https://ar-app-beta.vercel.app"
   );
+
+  const [play, pause, stop, data] = useSound('https://raw.githubusercontent.com/husnimubaraq/ar-app/main/public/assets/sounds/sound.mp3', {
+    numberOfLoops: -1,
+    soundEnabled: true
+  });
 
   const handleBackButtonPress = () => {
     if (canGoBack) {
@@ -31,9 +38,42 @@ export default function App() {
   };
 
   const onNavigationStateChange = (event) => {
+    console.log('event.url: ', event.url)
+    const modeAr = event.url.match(/category/g);
+
+    if([
+      "https://ar-app-beta.vercel.app/mode-game/2d",
+      "https://ar-app-beta.vercel.app/mode-game/3d",
+      "https://ar-app-beta.vercel.app/intro/2d",
+      "https://ar-app-beta.vercel.app/intro/3d",
+    ].includes(event.url) || modeAr){
+      stop()
+    }else{
+      play()
+    }
     setCurrentUrl(event.url);
     setCanGoBack(event.canGoBack);
   };
+
+  const onMessage = async (event) => {
+    const { type } = JSON.parse(event.nativeEvent.data)
+
+    if(type === 'btn-sound'){
+      if(isPlay){
+        stop()
+      }else{
+        play()
+      }
+
+      setIsPlay(!isPlay)
+    }else if(type === 'btn-exit'){
+      BackHandler.exitApp();
+    }
+  }
+
+  React.useEffect(() => {
+    play()
+  }, [play])
 
   React.useEffect(() => {
     (async () => {
@@ -59,31 +99,39 @@ export default function App() {
   }, [webViewRef, canGoBack]);
 
   return (
-    <WebView
-      style={styles.container}
-      originWhiteList={["*"]}
-      ref={webViewRef}
-      source={{
-        uri: currentUrl,
-      }}
-      onNavigationStateChange={onNavigationStateChange}
-      allowUniversalAccessFromFileURLs
-      scrollEnabled={true}
-      allowFileAccessFromFileURLs
-      mediaCapturePermissionGrantType='grant'
-      domStorageEnableds
-      allowFileAccess
-      useWebKit
-      allowsInlineMediaPlayback
-      mediaPlaybackRequiresUserAction={false}
-      startInLoadingState
-      thirdPartyCookiesEnabled
-      javaScriptEnabledAndroid
-      javaScriptEnabled
-      scalesPageToFit
-      webviewDebuggingEnabled
-      javaScriptCanOpenWindowsAutomatically={false}
-    />
+    <>
+      <StatusBar
+        translucent
+        backgroundColor='transparent'
+        barStyle='dark-content'
+      />
+      <WebView
+        style={styles.container}
+        originWhiteList={["*"]}
+        ref={webViewRef}
+        source={{
+          uri: currentUrl,
+        }}
+        onNavigationStateChange={onNavigationStateChange}
+        allowUniversalAccessFromFileURLs
+        scrollEnabled={true}
+        allowFileAccessFromFileURLs
+        mediaCapturePermissionGrantType='grant'
+        domStorageEnableds
+        allowFileAccess
+        useWebKit
+        allowsInlineMediaPlayback
+        mediaPlaybackRequiresUserAction={false}
+        startInLoadingState
+        thirdPartyCookiesEnabled
+        javaScriptEnabledAndroid
+        javaScriptEnabled
+        scalesPageToFit
+        webviewDebuggingEnabled
+        javaScriptCanOpenWindowsAutomatically={false}
+        onMessage={onMessage}
+      />
+    </>
   );
 }
 
