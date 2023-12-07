@@ -13,6 +13,7 @@ export default function App() {
   const webViewRef = React.useRef();
 
   const [isPlay, setIsPlay] = React.useState(true);
+  const [volume, setVolume] = React.useState(0.2);
 
   const [canGoBack, setCanGoBack] = React.useState(false);
   const [currentUrl, setCurrentUrl] = React.useState(
@@ -21,7 +22,7 @@ export default function App() {
 
   const [play, pause, stop, data] = useSound('https://raw.githubusercontent.com/husnimubaraq/ar-app/main/public/assets/sounds/sound.mp3', {
     numberOfLoops: -1,
-    soundEnabled: true
+    soundEnabled: true,
   });
 
   const handleBackButtonPress = () => {
@@ -40,16 +41,21 @@ export default function App() {
   const onNavigationStateChange = (event) => {
     console.log('event.url: ', event.url)
     const modeAr = event.url.match(/category/g);
+    const modeIntro = event.url.match(/list/g);
+    const modeCard = event.url.match(/mode-card/g);
 
     if([
       "https://ar-app-beta.vercel.app/mode-game/2d",
       "https://ar-app-beta.vercel.app/mode-game/3d",
       "https://ar-app-beta.vercel.app/intro/2d",
       "https://ar-app-beta.vercel.app/intro/3d",
-    ].includes(event.url) || modeAr){
+    ].includes(event.url) || modeAr || modeIntro){
       stop()
     }else{
-      play()
+      pause()
+      setTimeout(() => {
+        play()
+      }, 3500)
     }
     setCurrentUrl(event.url);
     setCanGoBack(event.canGoBack);
