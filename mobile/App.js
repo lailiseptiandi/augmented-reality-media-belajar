@@ -44,19 +44,23 @@ export default function App() {
     const modeIntro = event.url.match(/list/g);
     const modeCard = event.url.match(/mode-card/g);
 
-    if([
-      "https://ar-app-beta.vercel.app/mode-game/2d",
-      "https://ar-app-beta.vercel.app/mode-game/3d",
-      "https://ar-app-beta.vercel.app/intro/2d",
-      "https://ar-app-beta.vercel.app/intro/3d",
-    ].includes(event.url) || modeAr || modeIntro){
-      stop()
-    }else{
-      pause()
-      setTimeout(() => {
-        play()
-      }, 3500)
+    if(isPlay){
+      if([
+        "https://ar-app-beta.vercel.app/mode-game/2d",
+        "https://ar-app-beta.vercel.app/mode-game/3d",
+        "https://ar-app-beta.vercel.app/intro/2d",
+        "https://ar-app-beta.vercel.app/intro/3d",
+      ].includes(event.url) || modeAr || modeIntro){
+        stop()
+      }else{
+        pause()
+        setTimeout(() => {
+          play()
+        }, 3500)
+      }
     }
+
+    
     setCurrentUrl(event.url);
     setCanGoBack(event.canGoBack);
   };
@@ -64,7 +68,7 @@ export default function App() {
   const onMessage = async (event) => {
     const { type } = JSON.parse(event.nativeEvent.data)
 
-    if(type === 'btn-sound'){
+    if(type === 'btn-sound' || type === 'btn-sound-inactive'){
       if(isPlay){
         stop()
       }else{

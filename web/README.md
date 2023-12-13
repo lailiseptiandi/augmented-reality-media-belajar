@@ -24,12 +24,6 @@ This is a simple starter boilerplate that provides a solid foundation for your n
   - Prettier: An opinionated code formatter that ensures consistent code style throughout your project.
   - lint-staged: A tool that allows you to run linters on staged files, promoting code quality in your commits.
 
-## Example 🚀
-
-We have included a comprehensive example to demonstrate the usage and capabilities of this boilerplate. Check out the example folder for more details.
-
-- Financial Tracker
-- Meal Book
 
 ## Try it Now ▶️
 

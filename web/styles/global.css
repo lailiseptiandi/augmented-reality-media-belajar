@@ -20,6 +20,6 @@ video {
     margin: 20px auto;
     position: relative;
     height: calc(100vh - 150px);
-    width: 100vw;
+    width: calc(100vw + 50px);
     overflow: hidden;
 }

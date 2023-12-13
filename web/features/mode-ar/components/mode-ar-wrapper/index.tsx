@@ -1,87 +1,63 @@
-// @ts-nocheck
 'use client'
 
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-import { HomeIcon, SoundIcon } from 'components/icon';
+import Link from "next/link"
 
-import { data } from './data'
-
-import 'aframe';
-import 'mind-ar/dist/mindar-image-aframe.prod.js';
+import Image from 'next/image'
+import { HomeIcon, SoundIcon } from "components/icon"
+import { dataCard } from "features/mode-card"
+import { twMerge } from "tailwind-merge"
+import { useMenuSound } from 'hooks'
+import { ButtonSound } from "components/button-sound"
+import modeArSound from 'public/assets/sounds/modear.wav';
 
 export const ModeArWrapper = () => {
 
-  const sceneRef = useRef<any>(null)
-  
-  const [name, setName] = useState('')
+    useMenuSound(modeArSound)
 
-  useEffect(() => {
-    const sceneEl = sceneRef?.current ?? null
-    if (sceneEl) {
-      const arSystem = sceneEl?.systems["mindar-image-system"] ?? null
-      sceneEl?.addEventListener('renderstart', () => {
-        if (arSystem) {
-          arSystem?.start()
-        }
-      })
-    }
-  }, [])
-
-  useEffect(() => {
-    for(let item of data){
-      const target = document.querySelector(`#${item.name}-target`)
-
-      target?.addEventListener('targetFound', () => {
-        setName(item.title.toUpperCase())
-      })
-
-      target?.addEventListener('targetLost', () => {
-        setName('')
-      })
-    }
-  }, [])
-
-
-  return (
-    <div>
-      <div className="flex justify-between items-end text-neutral-500">
-        <Link
-          href="/"
-          className="text-neutral-500  hover:text-orange-500"
-        >
-          <HomeIcon />
-        </Link>
-        <SoundIcon />
-      </div>
-
-      <div className="container">
-        <a-scene ref={sceneRef} mindar-image="imageTargetSrc: ./targets.mind;uiScanning: no;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-          <a-assets>
-            {data.map((item) => (
-              <a-asset-item 
-                id={`${item.name}-model`} src={item.url}
-              ></a-asset-item>
-            ))}
-          </a-assets>
-
-          <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-          {data.map((item, index) => (
-            <a-entity id={`${item.name}-target`} mindar-image-target={`targetIndex: ${index}`}>
-              <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale={item.scale} src={`#${item.name}-model`} animation-mixer></a-gltf-model>
-            </a-entity>
-          ))}
-        </a-scene>
-
-        {name && (
-          <div className='fixed top-[11%] left-10 right-10'>
-            <div className='bg-orange-500 rounded-md py-2 px-5'>
-              <h4 className='text-xl font-bold text-white text-center'>{name}</h4>
+    return (
+        <div className="">
+            <div className="flex justify-between items-center text-neutral-500">
+                <Link
+                    href="/"
+                    className="text-neutral-500  hover:text-orange-500"
+                >
+                    <HomeIcon />
+                </Link>
+                <div className="bg-white shadow rounded-lg py-2.5 text-sm font-medium text-orange-500 px-4">
+                    <h3 className="font-bold">Mode AR</h3>
+                </div>
+                <ButtonSound/>
             </div>
-          </div>
-        )}
-      </div>
-    </div>
-  )
+
+            <div className="flex flex-col justify-center h-[80vh] mt-5">
+                <div className="flex items-center justify-around">
+                    <Link
+                        href='mode-ar/2d'
+                        className="flex flex-col items-center justify-center gap-y-3 hover:text-orange-500 px-5"
+                    >
+                        <Image
+                            src='/assets/images/geometry-2d.png'
+                            width={100}
+                            height={100}
+                            alt={""}
+                        />
+                        <p className='text-xl text-black font-medium text-center'>Bentuk Geometri 2D</p>
+                    </Link>
+
+                    <Link
+                        href='mode-ar/3d'
+                        className="flex flex-col items-center justify-center gap-y-3 hover:text-orange-500 px-5"
+                    >
+                        <Image
+                            src='/assets/images/geometry-3d.png'
+                            width={100}
+                            height={100}
+                            alt={""}
+                        />
+                        <p className='text-xl text-black font-medium text-center'>Bentuk Geometri 3D</p>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    )
 }

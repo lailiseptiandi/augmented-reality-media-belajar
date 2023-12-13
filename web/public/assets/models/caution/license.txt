@@ -1,0 +1,11 @@
+Model Information:
+* title:	Caution
+* source:	https://sketchfab.com/3d-models/caution-f3f40832bcf542fdbdf4cac4918a4f47
+* author:	freddo (https://sketchfab.com/arabsummer)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Caution" (https://sketchfab.com/3d-models/caution-f3f40832bcf542fdbdf4cac4918a4f47) by freddo (https://sketchfab.com/arabsummer) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

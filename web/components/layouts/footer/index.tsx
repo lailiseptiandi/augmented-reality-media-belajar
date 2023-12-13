@@ -16,7 +16,7 @@ export const Footer = (props: TProps) => {
                 <Link
                     href='/about'
                     className={twMerge(
-                        "text-neutral-500  hover:text-orange-500",
+                        "text-black  hover:text-orange-500",
                         disabled && "text-neutral-200"
                     )}
                 >
@@ -25,7 +25,7 @@ export const Footer = (props: TProps) => {
                 <Link
                     href='/guide'
                     className={twMerge(
-                        "text-neutral-500  hover:text-orange-500",
+                        "text-black  hover:text-orange-500",
                         disabled && "text-neutral-200"
                     )}
                 >
@@ -34,7 +34,7 @@ export const Footer = (props: TProps) => {
                 <Link
                     href='/setting'
                     className={twMerge(
-                        "text-neutral-500  hover:text-orange-500",
+                        "text-black  hover:text-orange-500",
                         disabled && "text-neutral-200"
                     )}
                 >
@@ -43,7 +43,7 @@ export const Footer = (props: TProps) => {
                 <Link
                     href='/information'
                     className={twMerge(
-                        "text-neutral-500  hover:text-orange-500",
+                        "text-black  hover:text-orange-500",
                         disabled && "text-neutral-200"
                     )}
                 >

@@ -1,0 +1,11 @@
+Model Information:
+* title:	PAPER
+* source:	https://sketchfab.com/3d-models/paper-af53679e0b464513ba4a303e409f5734
+* author:	lamdadomar18 (https://sketchfab.com/lamdadomar18)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "PAPER" (https://sketchfab.com/3d-models/paper-af53679e0b464513ba4a303e409f5734) by lamdadomar18 (https://sketchfab.com/lamdadomar18) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

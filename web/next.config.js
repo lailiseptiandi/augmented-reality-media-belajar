@@ -17,7 +17,7 @@ const nextConfig = {
   },
   webpack(config, { isServer }) {
     config.module.rules.push({
-      test: /\.(bin|glb|gltf|json)$/i,
+      test: /\.(bin|glb|gltf|json|mp3|wav)$/i,
       type: 'asset/resource',
       generator: {
         filename: 'static/[hash][ext]',

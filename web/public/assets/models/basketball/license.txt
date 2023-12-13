@@ -1,0 +1,11 @@
+Model Information:
+* title:	Basket Ball
+* source:	https://sketchfab.com/3d-models/basket-ball-7d185fa512604b3aaeca8a820c500661
+* author:	Ghalek (https://sketchfab.com/Ghalek)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Basket Ball" (https://sketchfab.com/3d-models/basket-ball-7d185fa512604b3aaeca8a820c500661) by Ghalek (https://sketchfab.com/Ghalek) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

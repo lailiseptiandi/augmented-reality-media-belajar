@@ -1,15 +1,32 @@
 'use client'
 
 import Link from "next/link"
-
+import Image from 'next/image'
 import { XIcon } from "components/icon"
 import { Footer } from "components/layouts"
+import { useCustomSound } from "hooks"
 
 export const HomeWrapper = () => {
+
+  useCustomSound()
+
+  const onClick = () => {
+    //@ts-ignore
+    window.ReactNativeWebView.postMessage(
+        JSON.stringify({
+            type: 'btn-exit'
+        })
+    )
+  }
+    
   return (
-    <div className="h-[100vh]">
+    <div 
+      className="h-[100vh]"
+    >
       <div className="flex flex-col items-end text-neutral-500">
-        <XIcon />
+        <button onClick={onClick} >
+          <XIcon />
+        </button>
       </div>
 
       <div className="flex items-center justify-center gap-x-2 mt-10">
@@ -22,20 +39,50 @@ export const HomeWrapper = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-y-10 mt-20">
+      <div className="flex flex-col items-center gap-y-5 mt-10">
+        <Link
+            href='/intro'
+            className="flex flex-col items-center rounded-md py-2 w-[80%] hover:text-orange-500 text-sm text-center"
+        >
+            <Image
+                src='/assets/images/intro.png'
+                width={70}
+                height={70}
+                alt={""}
+            />
+            <p className='text-xl text-black font-medium text-center'>Pengenalan Bentuk</p>
+        </Link>
         <Link
             href='/mode-ar'
-            className="bg-neutral-200 rounded-md py-2 w-[50%] hover:bg-orange-500 hover:text-white text-sm text-center"
+            className="flex flex-col items-center rounded-md py-2 w-[80%] hover:text-orange-500 text-sm text-center"
         >
-            MODE AR
+            <Image
+                src='/assets/images/ar.png'
+                width={70}
+                height={70}
+                alt={""}
+            />
+            <p className='text-xl text-black font-medium text-center'>Mode AR</p>
         </Link>
         
-        <Link href='/mode-game' className="bg-neutral-200 rounded-md py-2 w-[50%] hover:bg-orange-500 hover:text-white text-sm text-center">
-            BERMAIN
+        <Link href='/mode-game' className="flex flex-col items-center rounded-md py-2 w-[80%] hover:text-orange-500 text-sm text-center">
+            <Image
+                src='/assets/images/play.png'
+                width={70}
+                height={70}
+                alt={""}
+            />
+            <p className='text-xl text-black font-medium text-center'>Bermain</p>
         </Link>
 
-        <Link href="#" className="bg-neutral-200 rounded-md py-2 w-[50%] hover:bg-orange-500 hover:text-white text-sm text-center">
-            UNDUH KARTU
+        <Link href="/mode-card" className="flex flex-col items-center rounded-md py-2 w-[80%] hover:text-orange-500 text-sm text-center">
+            <Image
+                src='/assets/images/card.png'
+                width={70}
+                height={70}
+                alt={""}
+            />
+            <p className='text-xl text-black font-medium text-center'>Unduh Kartu</p>
         </Link>
       </div>
 

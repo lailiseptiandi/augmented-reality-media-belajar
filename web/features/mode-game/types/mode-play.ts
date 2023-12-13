@@ -9,4 +9,5 @@ export type TGame = {
     model: any
     text: string
     scale: number
+    name?: string
 }

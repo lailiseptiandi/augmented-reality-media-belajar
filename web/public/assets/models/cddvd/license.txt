@@ -1,0 +1,11 @@
+Model Information:
+* title:	CD/DVD
+* source:	https://sketchfab.com/3d-models/cddvd-800d08c54f484d078a50b0ed336bb8aa
+* author:	Jiří Kuba (https://sketchfab.com/kuba.jirka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CD/DVD" (https://sketchfab.com/3d-models/cddvd-800d08c54f484d078a50b0ed336bb8aa) by Jiří Kuba (https://sketchfab.com/kuba.jirka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
